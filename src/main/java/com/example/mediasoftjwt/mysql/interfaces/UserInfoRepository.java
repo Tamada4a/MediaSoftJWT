@@ -11,4 +11,7 @@ import java.util.ArrayList;
 public interface UserInfoRepository extends JpaRepository<UserInfo, String> {
     ArrayList<UserInfo> findByLogin(final String login);
     ArrayList<UserInfo> findByEmail(final String email);
+
+    boolean existsByLogin(final String login);
+    boolean existsByEmail(final String email);
 }
